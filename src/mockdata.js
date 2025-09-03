@@ -1,0 +1,588 @@
+const players = 
+    [
+  {
+    "id": 1,
+    "name": "LeBron James",
+    "team": "Los Angeles Lakers",
+    "position": "SF",
+    "stats": {
+      "pointsPerGame": 25.4,
+      "assistsPerGame": 8.1,
+      "reboundsPerGame": 7.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png"
+  },
+  {
+    "id": 2,
+    "name": "Stephen Curry",
+    "team": "Golden State Warriors",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 26.8,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 4.5
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png"
+  },
+  {
+    "id": 3,
+    "name": "Giannis Antetokounmpo",
+    "team": "Milwaukee Bucks",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 30.7,
+      "assistsPerGame": 5.9,
+      "reboundsPerGame": 11.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png"
+  },
+  {
+    "id": 4,
+    "name": "Nikola Jokic",
+    "team": "Denver Nuggets",
+    "position": "C",
+    "stats": {
+      "pointsPerGame": 26.4,
+      "assistsPerGame": 9.0,
+      "reboundsPerGame": 12.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png"
+  },
+  {
+    "id": 5,
+    "name": "Luka Doncic",
+    "team": "Dallas Mavericks",
+    "position": "SG",
+    "stats": {
+      "pointsPerGame": 33.9,
+      "assistsPerGame": 9.8,
+      "reboundsPerGame": 9.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4279887.png"
+  },
+  {
+    "id": 6,
+    "name": "Kevin Durant",
+    "team": "Phoenix Suns",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 27.1,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 6.6
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3209.png"
+  },
+  
+  {
+    "id": 8,
+    "name": "Damian Lillard",
+    "team": "Milwaukee Bucks",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 24.3,
+      "assistsPerGame": 7.0,
+      "reboundsPerGame": 4.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png"
+  },
+  {
+    "id": 10,
+    "name": "Zion Williamson",
+    "team": "New Orleans Pelicans",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 22.9,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 5.8
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395625.png"
+  },
+   
+  {
+    "id": 1,
+    "name": "LeBron James",
+    "team": "Los Angeles Lakers",
+    "position": "SF",
+    "stats": {
+      "pointsPerGame": 25.4,
+      "assistsPerGame": 8.1,
+      "reboundsPerGame": 7.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png"
+  },
+  {
+    "id": 2,
+    "name": "Stephen Curry",
+    "team": "Golden State Warriors",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 26.8,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 4.5
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png"
+  },
+  {
+    "id": 3,
+    "name": "Giannis Antetokounmpo",
+    "team": "Milwaukee Bucks",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 30.7,
+      "assistsPerGame": 5.9,
+      "reboundsPerGame": 11.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png"
+  },
+  {
+    "id": 4,
+    "name": "Nikola Jokic",
+    "team": "Denver Nuggets",
+    "position": "C",
+    "stats": {
+      "pointsPerGame": 26.4,
+      "assistsPerGame": 9.0,
+      "reboundsPerGame": 12.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png"
+  },
+  {
+    "id": 5,
+    "name": "Luka Doncic",
+    "team": "Dallas Mavericks",
+    "position": "SG",
+    "stats": {
+      "pointsPerGame": 33.9,
+      "assistsPerGame": 9.8,
+      "reboundsPerGame": 9.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4279887.png"
+  },
+  {
+    "id": 6,
+    "name": "Kevin Durant",
+    "team": "Phoenix Suns",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 27.1,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 6.6
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3209.png"
+  },
+  
+  {
+    "id": 8,
+    "name": "Damian Lillard",
+    "team": "Milwaukee Bucks",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 24.3,
+      "assistsPerGame": 7.0,
+      "reboundsPerGame": 4.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png"
+  },
+  {
+    "id": 10,
+    "name": "Zion Williamson",
+    "team": "New Orleans Pelicans",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 22.9,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 5.8
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395625.png"
+  },
+  {
+    "id": 1,
+    "name": "LeBron James",
+    "team": "Los Angeles Lakers",
+    "position": "SF",
+    "stats": {
+      "pointsPerGame": 25.4,
+      "assistsPerGame": 8.1,
+      "reboundsPerGame": 7.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png"
+  },
+  {
+    "id": 2,
+    "name": "Stephen Curry",
+    "team": "Golden State Warriors",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 26.8,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 4.5
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png"
+  },
+  {
+    "id": 3,
+    "name": "Giannis Antetokounmpo",
+    "team": "Milwaukee Bucks",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 30.7,
+      "assistsPerGame": 5.9,
+      "reboundsPerGame": 11.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png"
+  },
+  {
+    "id": 4,
+    "name": "Nikola Jokic",
+    "team": "Denver Nuggets",
+    "position": "C",
+    "stats": {
+      "pointsPerGame": 26.4,
+      "assistsPerGame": 9.0,
+      "reboundsPerGame": 12.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png"
+  },
+  {
+    "id": 5,
+    "name": "Luka Doncic",
+    "team": "Dallas Mavericks",
+    "position": "SG",
+    "stats": {
+      "pointsPerGame": 33.9,
+      "assistsPerGame": 9.8,
+      "reboundsPerGame": 9.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4279887.png"
+  },
+  {
+    "id": 6,
+    "name": "Kevin Durant",
+    "team": "Phoenix Suns",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 27.1,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 6.6
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3209.png"
+  },
+  
+  {
+    "id": 8,
+    "name": "Damian Lillard",
+    "team": "Milwaukee Bucks",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 24.3,
+      "assistsPerGame": 7.0,
+      "reboundsPerGame": 4.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png"
+  },
+  {
+    "id": 10,
+    "name": "Zion Williamson",
+    "team": "New Orleans Pelicans",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 22.9,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 5.8
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395625.png"
+  },
+  {
+    "id": 1,
+    "name": "LeBron James",
+    "team": "Los Angeles Lakers",
+    "position": "SF",
+    "stats": {
+      "pointsPerGame": 25.4,
+      "assistsPerGame": 8.1,
+      "reboundsPerGame": 7.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png"
+  },
+  {
+    "id": 2,
+    "name": "Stephen Curry",
+    "team": "Golden State Warriors",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 26.8,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 4.5
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png"
+  },
+  {
+    "id": 3,
+    "name": "Giannis Antetokounmpo",
+    "team": "Milwaukee Bucks",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 30.7,
+      "assistsPerGame": 5.9,
+      "reboundsPerGame": 11.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png"
+  },
+  {
+    "id": 4,
+    "name": "Nikola Jokic",
+    "team": "Denver Nuggets",
+    "position": "C",
+    "stats": {
+      "pointsPerGame": 26.4,
+      "assistsPerGame": 9.0,
+      "reboundsPerGame": 12.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png"
+  },
+  {
+    "id": 5,
+    "name": "Luka Doncic",
+    "team": "Dallas Mavericks",
+    "position": "SG",
+    "stats": {
+      "pointsPerGame": 33.9,
+      "assistsPerGame": 9.8,
+      "reboundsPerGame": 9.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4279887.png"
+  },
+  {
+    "id": 6,
+    "name": "Kevin Durant",
+    "team": "Phoenix Suns",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 27.1,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 6.6
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3209.png"
+  },
+  
+  {
+    "id": 8,
+    "name": "Damian Lillard",
+    "team": "Milwaukee Bucks",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 24.3,
+      "assistsPerGame": 7.0,
+      "reboundsPerGame": 4.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png"
+  },
+  {
+    "id": 10,
+    "name": "Zion Williamson",
+    "team": "New Orleans Pelicans",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 22.9,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 5.8
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395625.png"
+  }
+  ,
+  {
+    "id": 1,
+    "name": "LeBron James",
+    "team": "Los Angeles Lakers",
+    "position": "SF",
+    "stats": {
+      "pointsPerGame": 25.4,
+      "assistsPerGame": 8.1,
+      "reboundsPerGame": 7.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png"
+  },
+  {
+    "id": 2,
+    "name": "Stephen Curry",
+    "team": "Golden State Warriors",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 26.8,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 4.5
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png"
+  },
+  {
+    "id": 3,
+    "name": "Giannis Antetokounmpo",
+    "team": "Milwaukee Bucks",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 30.7,
+      "assistsPerGame": 5.9,
+      "reboundsPerGame": 11.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png"
+  },
+  {
+    "id": 4,
+    "name": "Nikola Jokic",
+    "team": "Denver Nuggets",
+    "position": "C",
+    "stats": {
+      "pointsPerGame": 26.4,
+      "assistsPerGame": 9.0,
+      "reboundsPerGame": 12.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png"
+  },
+  {
+    "id": 5,
+    "name": "Luka Doncic",
+    "team": "Dallas Mavericks",
+    "position": "SG",
+    "stats": {
+      "pointsPerGame": 33.9,
+      "assistsPerGame": 9.8,
+      "reboundsPerGame": 9.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4279887.png"
+  },
+  {
+    "id": 6,
+    "name": "Kevin Durant",
+    "team": "Phoenix Suns",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 27.1,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 6.6
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3209.png"
+  },
+  
+  {
+    "id": 8,
+    "name": "Damian Lillard",
+    "team": "Milwaukee Bucks",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 24.3,
+      "assistsPerGame": 7.0,
+      "reboundsPerGame": 4.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png"
+  },
+  {
+    "id": 10,
+    "name": "Zion Williamson",
+    "team": "New Orleans Pelicans",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 22.9,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 5.8
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395625.png"
+  },
+  {
+    "id": 1,
+    "name": "LeBron James",
+    "team": "Los Angeles Lakers",
+    "position": "SF",
+    "stats": {
+      "pointsPerGame": 25.4,
+      "assistsPerGame": 8.1,
+      "reboundsPerGame": 7.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png"
+  },
+  {
+    "id": 2,
+    "name": "Stephen Curry",
+    "team": "Golden State Warriors",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 26.8,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 4.5
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png"
+  },
+  {
+    "id": 3,
+    "name": "Giannis Antetokounmpo",
+    "team": "Milwaukee Bucks",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 30.7,
+      "assistsPerGame": 5.9,
+      "reboundsPerGame": 11.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png"
+  },
+  {
+    "id": 4,
+    "name": "Nikola Jokic",
+    "team": "Denver Nuggets",
+    "position": "C",
+    "stats": {
+      "pointsPerGame": 26.4,
+      "assistsPerGame": 9.0,
+      "reboundsPerGame": 12.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png"
+  },
+  {
+    "id": 5,
+    "name": "Luka Doncic",
+    "team": "Dallas Mavericks",
+    "position": "SG",
+    "stats": {
+      "pointsPerGame": 33.9,
+      "assistsPerGame": 9.8,
+      "reboundsPerGame": 9.2
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4279887.png"
+  },
+  {
+    "id": 6,
+    "name": "Kevin Durant",
+    "team": "Phoenix Suns",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 27.1,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 6.6
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3209.png"
+  },
+  
+  {
+    "id": 8,
+    "name": "Damian Lillard",
+    "team": "Milwaukee Bucks",
+    "position": "PG",
+    "stats": {
+      "pointsPerGame": 24.3,
+      "assistsPerGame": 7.0,
+      "reboundsPerGame": 4.4
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png"
+  },
+  {
+    "id": 10,
+    "name": "Zion Williamson",
+    "team": "New Orleans Pelicans",
+    "position": "PF",
+    "stats": {
+      "pointsPerGame": 22.9,
+      "assistsPerGame": 5.0,
+      "reboundsPerGame": 5.8
+    },
+    "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395625.png"
+  }
+]
+export default players;
